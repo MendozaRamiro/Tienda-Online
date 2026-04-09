@@ -1,0 +1,34 @@
+[
+  {
+    "id": 6001,
+    "id_usuario": 1,
+    "fecha": "2026-04-09",
+    "total": 1030000,
+    "direccion": "Belgrano 123",
+    "productos": [
+      {
+        "id_producto": 201,
+        "cantidad": 1
+      },
+      {
+        "id_producto": 202,
+        "cantidad": 1
+      }
+    ],
+    "pagado": true
+  },
+  {
+    "id": 6002,
+    "id_usuario": 2,
+    "fecha": "2026-04-08",
+    "total": 700000,
+    "direccion": "Mitre 456",
+    "productos": [
+      {
+        "id_producto": 203,
+        "cantidad": 1
+      }
+    ],
+    "pagado": false
+  }
+]

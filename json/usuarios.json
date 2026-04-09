@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ramiro",
+    "apellido": "Mendoza",
+    "email": "ramiro@gmail.com",
+    "contraseña": "1234",
+    "activo": true
+  },
+  {
+    "id": 2,
+    "nombre": "Lucia",
+    "apellido": "Gomez",
+    "email": "lucia@gmail.com",
+    "contraseña": "lucia123",
+    "activo": true
+  },
+  {
+    "id": 3,
+    "nombre": "Martin",
+    "apellido": "Lopez",
+    "email": "martin@gmail.com",
+    "contraseña": "martin2024",
+    "activo": false
+  }
+]

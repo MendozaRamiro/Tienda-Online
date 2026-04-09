@@ -1,0 +1,39 @@
+[
+  {
+    "id": 201,
+    "nombre": "Televisor Samsung 50''",
+    "desc": "Smart TV 4K con Netflix y YouTube integrado",
+    "precio": 450000,
+    "imagen": "tv_samsung.jpg",
+    "stock": 8,
+    "activo": true
+  },
+  {
+    "id": 202,
+    "nombre": "Heladera Whirlpool",
+    "desc": "Heladera no frost 300L acero inoxidable",
+    "precio": 600000,
+    "imagen": "heladera.jpg",
+    "stock": 5,
+    "activo": true
+  },
+  {
+    "id": 203,
+    "nombre": "Lavarropas Drean",
+    "desc": "Lavarropas automático 8kg carga frontal",
+    "precio": 520000,
+    "imagen": "lavarropas.jpg",
+    "stock": 6,
+    "activo": true
+  },
+  {
+    "id": 204,
+    "nombre": "Microondas BGH",
+    "desc": "Microondas digital 20L con grill",
+    "precio": 180000,
+    "imagen": "microondas.jpg",
+    "stock": 12,
+    "activo": true
+  }
+]
+  
