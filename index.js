@@ -8,7 +8,7 @@ let usuarios = require('./json/usuarios.json');
 let ventas = require('./json/ventas.json');
 
 
-// ===== USUARIOS =====
+
 app.get('/usuarios', (req, res) => {
   res.json(usuarios);
 });
@@ -48,7 +48,7 @@ app.delete('/usuarios/:id', (req, res) => {
 });
 
 
-// ===== PRODUCTOS =====
+
 app.get('/productos', (req, res) => {
   res.json(productos);
 });
@@ -59,7 +59,7 @@ app.post('/productos', (req, res) => {
 });
 
 
-// ===== VENTAS =====
+
 app.get('/ventas', (req, res) => {
   res.json(ventas);
 });
@@ -86,7 +86,7 @@ app.post('/ventas', (req, res) => {
 });
 
 
-// ===== SERVER =====
+
 app.listen(3000, () => {
   console.log('Servidor corriendo en puerto 3000');
 });
