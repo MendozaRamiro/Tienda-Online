@@ -21,5 +21,7 @@ POST /ventas
  Reglas
  
  No se puede eliminar un usuario con ventas
+
  No se puede crear una venta con usuario inexistente
+
  No se puede crear una venta con productos inexistentes
