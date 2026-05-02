@@ -1,27 +1,21 @@
- API Tienda Online
+# API Tienda Online
 
- Usuarios
-
+## Usuarios
 GET /usuarios  
 GET /usuarios/:id  
 POST /usuarios  
 PUT /usuarios/:id  
 DELETE /usuarios/:id  
 
- Productos
-
+## Productos
 GET /productos  
 POST /productos  
 
- Ventas
-
+## Ventas
 GET /ventas  
 POST /ventas  
 
- Reglas
- 
- No se puede eliminar un usuario con ventas
-
- No se puede crear una venta con usuario inexistente
-
- No se puede crear una venta con productos inexistentes
+## Reglas
+- No se puede eliminar un usuario con ventas
+- No se puede crear una venta con usuario inexistente
+- No se puede crear una venta con productos inexistentes

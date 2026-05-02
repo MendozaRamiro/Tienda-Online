@@ -34,6 +34,28 @@
     "imagen": "microondas.jpg",
     "stock": 12,
     "activo": true
+  },
+  {
+    "id": 99,
+    "nombre": "Test",
+    "apellido": "Prueba",
+    "email": "test@test.com",
+    "activo": true
+  },
+  {
+    "id": 99,
+    "nombre": "Test",
+    "apellido": "Prueba",
+    "email": "test@test.com",
+    "activo": true
+  },
+  {
+    "id": 300,
+    "nombre": "Mouse Gamer",
+    "desc": "RGB",
+    "precio": 50000,
+    "imagen": "mouse.jpg",
+    "stock": 10,
+    "activo": true
   }
 ]
-  
