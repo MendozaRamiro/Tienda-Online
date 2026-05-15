@@ -1,0 +1,100 @@
+[
+  {
+    "id": 201,
+    "nombre": "Televisor Samsung 50''",
+    "categoria": "TV",
+    "desc": "Smart TV 4K con Netflix y YouTube integrado",
+    "precio": 450000,
+    "imagen": "imagenes/TVS.jpg",
+    "stock": 8,
+    "activo": true
+  },
+
+  {
+    "id": 205,
+    "nombre": "Smart TV LG 55''",
+    "categoria": "TV",
+    "desc": "Televisor 4K UHD con HDR",
+    "precio": 580000,
+    "imagen": "imagenes/TVLG.jpg",
+    "stock": 3,
+    "activo": true
+  },
+
+  {
+    "id": 206,
+    "nombre": "TV Philips 43''",
+    "categoria": "TV",
+    "desc": "Android TV Full HD",
+    "precio": 390000,
+    "imagen": "imagenes/TVP.jpg",
+    "stock": 5,
+    "activo": true
+  },
+
+  {
+    "id": 202,
+    "nombre": "Heladera Whirlpool",
+    "categoria": "Electrodomesticos",
+    "desc": "Heladera no frost 300L acero inoxidable",
+    "precio": 600000,
+    "imagen": "imagenes/HW.jpg",
+    "stock": 5,
+    "activo": true
+  },
+
+  {
+    "id": 203,
+    "nombre": "Lavarropas Drean",
+    "categoria": "Electrodomesticos",
+    "desc": "Lavarropas automático 8kg carga frontal",
+    "precio": 520000,
+    "imagen": "imagenes/LVD.jpg",
+    "stock": 6,
+    "activo": true
+  },
+
+  {
+    "id": 204,
+    "nombre": "Microondas BGH",
+    "categoria": "Electrodomesticos",
+    "desc": "Microondas digital 20L con grill",
+    "precio": 180000,
+    "imagen": "imagenes/BGH.jpg",
+    "stock": 12,
+    "activo": true
+  },
+
+  {
+    "id": 301,
+    "nombre": "Auriculares Sony",
+    "categoria": "Audio",
+    "desc": "Auriculares inalámbricos Bluetooth",
+    "precio": 95000,
+    "imagen": "imagenes/SONY.jpg",
+    "stock": 8,
+    "activo": true
+  },
+
+  {
+    "id": 302,
+    "nombre": "Parlante JBL",
+    "categoria": "Audio",
+    "desc": "Parlante portátil resistente al agua",
+    "precio": 120000,
+    "imagen": "imagenes/JBL.jpg",
+    "stock": 7,
+    "activo": true
+  },
+
+  {
+    "id": 303,
+    "nombre": "Barra de Sonido Samsung",
+    "categoria": "Audio",
+    "desc": "Soundbar Dolby Audio",
+    "precio": 210000,
+    "imagen": "imagenes/BS.png",
+    "stock": 4,
+    "activo": true
+  }
+]

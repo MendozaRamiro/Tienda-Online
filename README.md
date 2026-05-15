@@ -1,21 +1,29 @@
-# API Tienda Online
+# Tienda Online
 
-## Usuarios
-GET /usuarios  
-GET /usuarios/:id  
-POST /usuarios  
-PUT /usuarios/:id  
-DELETE /usuarios/:id  
+Proyecto realizado con:
 
-## Productos
-GET /productos  
-POST /productos  
+- Node.js
+- Express
+- HTML
+- CSS
+- JavaScript
 
-## Ventas
-GET /ventas  
-POST /ventas  
+## Instalación
 
-## Reglas
-- No se puede eliminar un usuario con ventas
-- No se puede crear una venta con usuario inexistente
-- No se puede crear una venta con productos inexistentes
+Abrir terminal en la carpeta backend:
+
+```bash
+npm install
+```
+
+## Ejecutar servidor
+
+```bash
+node index.js
+```
+
+## Abrir aplicación
+
+Entrar a:
+
+http://localhost:3000

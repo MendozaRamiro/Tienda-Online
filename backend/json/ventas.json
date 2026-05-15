@@ -1,0 +1,284 @@
+[
+  {
+    "id": 6001,
+    "id_usuario": 1,
+    "fecha": "2026-04-09",
+    "total": 1030000,
+    "direccion": "Belgrano 123",
+    "productos": [
+      {
+        "id_producto": 201,
+        "cantidad": 1
+      },
+      {
+        "id_producto": 202,
+        "cantidad": 1
+      }
+    ],
+    "pagado": true
+  },
+  {
+    "id": 6002,
+    "id_usuario": 2,
+    "fecha": "2026-04-08",
+    "total": 700000,
+    "direccion": "Mitre 456",
+    "productos": [
+      {
+        "id_producto": 203,
+        "cantidad": 1
+      }
+    ],
+    "pagado": false
+  },
+  {
+    "id": 1778778200127,
+    "id_usuario": 1,
+    "fecha": "2026-05-14",
+    "total": 1230000,
+    "direccion": "Salto",
+    "productos": [
+      {
+        "id_producto": 201,
+        "cantidad": 1
+      },
+      {
+        "id_producto": 206,
+        "cantidad": 1
+      },
+      {
+        "id_producto": 206,
+        "cantidad": 1
+      }
+    ],
+    "pagado": true
+  },
+  {
+    "id": 1778782695599,
+    "id_usuario": 1,
+    "fecha": "2026-05-14",
+    "total": 520000,
+    "direccion": "Salto",
+    "productos": [
+      {
+        "id_producto": 203,
+        "cantidad": 1
+      }
+    ],
+    "pagado": true
+  },
+  {
+    "id": 1778783755028,
+    "id_usuario": 1,
+    "fecha": "2026-05-14",
+    "total": 0,
+    "direccion": "Salto",
+    "productos": [],
+    "pagado": true
+  },
+  {
+    "id": 1778877584038,
+    "id_usuario": 1,
+    "fecha": "2026-05-14",
+    "total": 450000,
+    "direccion": "Salto",
+    "productos": [
+      {
+        "id_producto": 201,
+        "cantidad": 1
+      }
+    ],
+    "pagado": true
+  },
+  {
+    "id": 1778877757829,
+    "id_usuario": 1,
+    "fecha": "2026-05-14",
+    "total": 0,
+    "direccion": "Salto",
+    "productos": [],
+    "pagado": true
+  },
+  {
+    "id": 1778879591912,
+    "id_usuario": 1,
+    "fecha": "2026-05-14",
+    "total": 0,
+    "direccion": "Salto",
+    "productos": [],
+    "pagado": true
+  },
+  {
+    "id": 1778879595975,
+    "id_usuario": 1,
+    "fecha": "2026-05-14",
+    "total": 0,
+    "direccion": "Salto",
+    "productos": [],
+    "pagado": true
+  },
+  {
+    "id": 1778880967578,
+    "id_usuario": 1,
+    "fecha": "2026-05-14",
+    "total": 450000,
+    "direccion": "Salto",
+    "productos": [
+      {
+        "id_producto": 201,
+        "cantidad": 1
+      },
+      {
+        "id_producto": {
+          "id": 205,
+          "nombre": "Smart TV LG 55''",
+          "categoria": "TV",
+          "desc": "Televisor 4K UHD con HDR",
+          "precio": 580000,
+          "imagen": "imagenes/TVLG.jpg",
+          "stock": 3,
+          "activo": true
+        },
+        "cantidad": 1
+      },
+      {
+        "id_producto": {
+          "id": 206,
+          "nombre": "TV Philips 43''",
+          "categoria": "TV",
+          "desc": "Android TV Full HD",
+          "precio": 390000,
+          "imagen": "imagenes/TVP.jpg",
+          "stock": 5,
+          "activo": true
+        },
+        "cantidad": 1
+      },
+      {
+        "id_producto": {
+          "id": 203,
+          "nombre": "Lavarropas Drean",
+          "categoria": "Electrodomesticos",
+          "desc": "Lavarropas automático 8kg carga frontal",
+          "precio": 520000,
+          "imagen": "imagenes/LVD.jpg",
+          "stock": 6,
+          "activo": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "pagado": true
+  },
+  {
+    "id": 1778881094429,
+    "id_usuario": 1,
+    "fecha": "2026-05-14",
+    "total": 0,
+    "direccion": "Salto",
+    "productos": [],
+    "pagado": true
+  },
+  {
+    "id": 1778881156861,
+    "id_usuario": 1,
+    "fecha": "2026-05-14",
+    "total": 0,
+    "direccion": "Salto",
+    "productos": [
+      {
+        "id_producto": {
+          "id": 205,
+          "nombre": "Smart TV LG 55''",
+          "categoria": "TV",
+          "desc": "Televisor 4K UHD con HDR",
+          "precio": 580000,
+          "imagen": "imagenes/TVLG.jpg",
+          "stock": 3,
+          "activo": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "pagado": true
+  },
+  {
+    "id": 1778881298682,
+    "id_usuario": 1,
+    "fecha": "2026-05-14",
+    "total": 0,
+    "direccion": "Salto",
+    "productos": [
+      {
+        "id_producto": {
+          "id": 206,
+          "nombre": "TV Philips 43''",
+          "categoria": "TV",
+          "desc": "Android TV Full HD",
+          "precio": 390000,
+          "imagen": "imagenes/TVP.jpg",
+          "stock": 5,
+          "activo": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "pagado": true
+  },
+  {
+    "id": 1778881402754,
+    "id_usuario": 1,
+    "fecha": "2026-05-14",
+    "total": 2630000,
+    "direccion": "Salto",
+    "productos": [
+      {
+        "id_producto": 206,
+        "cantidad": 1
+      },
+      {
+        "id_producto": 202,
+        "cantidad": 1
+      },
+      {
+        "id_producto": 203,
+        "cantidad": 1
+      },
+      {
+        "id_producto": 202,
+        "cantidad": 1
+      },
+      {
+        "id_producto": 203,
+        "cantidad": 1
+      }
+    ],
+    "pagado": true
+  },
+  {
+    "id": 1778881416555,
+    "id_usuario": 1,
+    "fecha": "2026-05-14",
+    "total": 1940000,
+    "direccion": "Salto",
+    "productos": [
+      {
+        "id_producto": 206,
+        "cantidad": 1
+      },
+      {
+        "id_producto": 203,
+        "cantidad": 1
+      },
+      {
+        "id_producto": 205,
+        "cantidad": 1
+      },
+      {
+        "id_producto": 201,
+        "cantidad": 1
+      }
+    ],
+    "pagado": true
+  }
+]
