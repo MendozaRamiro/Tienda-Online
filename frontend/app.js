@@ -172,3 +172,13 @@ function agregarCarrito(id){
   alert('Producto agregado al carrito');
 
 }
+function logout(){
+
+  localStorage.removeItem(
+    'usuario'
+  );
+
+  window.location.href =
+    'login.html';
+
+}

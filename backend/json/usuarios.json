@@ -22,5 +22,11 @@
     "email": "martin@gmail.com",
     "contraseña": "martin2024",
     "activo": false
+  },
+  {
+    "id": 1781195954056,
+    "nombre": "Ramiro",
+    "contraseña": "Mendoza",
+    "activo": true
   }
 ]
