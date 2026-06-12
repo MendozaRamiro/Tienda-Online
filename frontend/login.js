@@ -6,32 +6,38 @@ function iniciarSesion(){
   const password =
     document.getElementById('password').value;
 
-  if(usuario === '' || password === ''){
+  fetch('/login', {
 
-    alert('Completá todos los campos');
-    return;
+    method:'POST',
 
-  }
+    headers:{
+      'Content-Type':'application/json'
+    },
 
-  fetch('/usuarios')
+    body: JSON.stringify({
+
+      nombre: usuario,
+
+      contraseña: password
+
+    })
+
+  })
 
   .then(res => res.json())
 
-  .then(usuarios => {
+  .then(data => {
 
-    const existe = usuarios.find(
+    if(data.token){
 
-      u =>
-        u.nombre === usuario &&
-        u.contraseña === password
-
-    );
-
-    if(existe){
+      localStorage.setItem(
+        'token',
+        data.token
+      );
 
       localStorage.setItem(
         'usuario',
-        usuario
+        data.usuario
       );
 
       window.location.href =

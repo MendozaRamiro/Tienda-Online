@@ -1,20 +1,31 @@
 import express from 'express';
-import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+
+import Usuario from './models/Usuario.js';
+import Producto from './models/Producto.js';
+import Venta from './models/Venta.js';
+
+dotenv.config();
 
 const app = express();
 
-
+mongoose.connect(process.env.MONGO_URI)
+.then(() => {
+  console.log('MongoDB conectado');
+})
+.catch(error => {
+  console.log(error);
+});
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-
-
 app.use(express.json());
-
-
 
 app.use(
   express.static(
@@ -24,25 +35,9 @@ app.use(
 
 
 
+app.get('/usuarios', async (req, res) => {
 
-
-const productos = JSON.parse(
-  fs.readFileSync('./json/productos.json', 'utf-8')
-);
-
-const usuarios = JSON.parse(
-  fs.readFileSync('./json/usuarios.json', 'utf-8')
-);
-
-const ventas = JSON.parse(
-  fs.readFileSync('./json/ventas.json', 'utf-8')
-);
-
-
-
-
-
-app.get('/usuarios', (req, res) => {
+  const usuarios = await Usuario.find();
 
   res.json(usuarios);
 
@@ -50,26 +45,100 @@ app.get('/usuarios', (req, res) => {
 
 
 
+app.post('/usuarios', async (req, res) => {
 
+  try {
 
-app.post('/usuarios', (req, res) => {
+    const passwordEncriptada =
+      await bcrypt.hash(req.body.contraseña, 10);
 
-  usuarios.push(req.body);
+    const nuevoUsuario = new Usuario({
 
-  fs.writeFileSync(
-    './json/usuarios.json',
-    JSON.stringify(usuarios, null, 2)
-  );
+      id: Date.now(),
 
-  res.send('Usuario creado');
+      nombre: req.body.nombre,
+
+      contraseña: passwordEncriptada,
+
+      activo: true
+
+    });
+
+    await nuevoUsuario.save();
+
+    res.send('Usuario creado');
+
+  }
+
+  catch(error){
+
+    console.log(error);
+
+    res.status(500).send('Error');
+
+  }
 
 });
 
 
 
+app.post('/login', async (req, res) => {
+
+  const { nombre, contraseña } = req.body;
+
+  const usuario = await Usuario.findOne({
+    nombre
+  });
+
+  if(!usuario){
+
+    return res.status(401).json({
+      mensaje:'Usuario no encontrado'
+    });
+
+  }
+
+  const valida =
+    await bcrypt.compare(
+      contraseña,
+      usuario.contraseña
+    );
+
+  if(!valida){
+
+    return res.status(401).json({
+      mensaje:'Contraseña incorrecta'
+    });
+
+  }
+
+  const token = jwt.sign(
+
+    {
+      id: usuario.id,
+      nombre: usuario.nombre
+    },
+
+    process.env.JWT_SECRET,
+
+    {
+      expiresIn:'1h'
+    }
+
+  );
+
+  res.json({
+    token,
+    usuario: usuario.nombre
+  });
+
+});
 
 
-app.get('/productos', (req, res) => {
+app.get('/productos', async (req, res) => {
+
+  const productos =
+    await Producto.find();
 
   res.json(productos);
 
@@ -77,51 +146,73 @@ app.get('/productos', (req, res) => {
 
 
 
+app.get('/ventas', async (req, res) => {
 
-
-app.get('/ventas', (req, res) => {
+  const ventas =
+    await Venta.find();
 
   res.json(ventas);
 
 });
 
 
+app.post('/ventas', async (req, res) => {
 
+  try{
 
+    const token =
+      req.headers.authorization;
 
-app.post('/ventas', (req, res) => {
+    if(!token){
 
-  const nueva = req.body;
+      return res.status(401).send(
+        'Token requerido'
+      );
 
-  ventas.push(nueva);
+    }
 
-  fs.writeFileSync(
-    './json/ventas.json',
-    JSON.stringify(ventas, null, 2)
-  );
+    jwt.verify(
+      token,
+      process.env.JWT_SECRET
+    );
 
-  res.send('Compra realizada');
+    const nuevaVenta =
+      new Venta(req.body);
+
+    await nuevaVenta.save();
+
+    res.send(
+      'Compra realizada'
+    );
+
+  }
+
+  catch(error){
+
+    res.status(401).send(
+      'Token inválido'
+    );
+
+  }
 
 });
-
-
-
 
 
 app.get('/', (req, res) => {
 
   res.sendFile(
-    path.join(__dirname, '../frontend/login.html')
+    path.join(
+      __dirname,
+      '../frontend/login.html'
+    )
   );
 
 });
 
-
-
-
-
 app.listen(3000, () => {
 
-  console.log('Servidor corriendo en puerto 3000');
+  console.log(
+    'Servidor corriendo en puerto 3000'
+  );
 
 });

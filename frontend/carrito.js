@@ -80,7 +80,8 @@ totalHTML.innerText =
 
 function comprar(){
 
-
+  const token =
+    localStorage.getItem('token');
 
   let productosCompra =
 
@@ -93,16 +94,17 @@ function comprar(){
     }));
 
 
-
   fetch('/ventas', {
 
     method:'POST',
 
     headers:{
-      'Content-Type':'application/json'
+
+      'Content-Type':'application/json',
+
+      'Authorization': token
+
     },
-
-
 
     body: JSON.stringify({
 
@@ -110,7 +112,7 @@ function comprar(){
 
       id_usuario: 1,
 
-      fecha: '2026-05-14',
+      fecha: '2026-06-12',
 
       total: total,
 
@@ -124,19 +126,13 @@ function comprar(){
 
   })
 
-
-
   .then(res => res.text())
 
   .then(data => {
 
-    alert('Compra realizada ');
-
-
+    alert(data);
 
     localStorage.removeItem('carrito');
-
-
 
     window.location.href =
       'tienda.html';

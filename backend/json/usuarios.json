@@ -28,5 +28,23 @@
     "nombre": "Ramiro",
     "contraseña": "Mendoza",
     "activo": true
+  },
+  {
+    "id": 1781205059561,
+    "nombre": "PruebaMongo",
+    "contraseña": "mendo",
+    "activo": true
+  },
+  {
+    "id": 1781205109953,
+    "nombre": "r",
+    "contraseña": "r",
+    "activo": true
+  },
+  {
+    "id": 1781205443073,
+    "nombre": "prueba",
+    "contraseña": "r",
+    "activo": true
   }
 ]
